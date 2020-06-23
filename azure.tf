@@ -1,3 +1,6 @@
+
+
+
 provider "azurerm" {
   # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
   version = "=2.0.0"
@@ -5,6 +8,12 @@ provider "azurerm" {
 }
 
 
+backend "azurerm" {     
+ storage_account_name  = "tstate20021"     
+ container_name        = "tstate"     
+ key                   = "terraform.tfstate"   
+ } 
+ 
 resource "azurerm_resource_group" "resourcegroup" {
   name     = "challenge1"
   location = "southindia"
