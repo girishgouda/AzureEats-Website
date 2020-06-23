@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { ConfigService } from "../../services";
 import { withNamespaces } from "react-i18next";
 
