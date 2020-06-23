@@ -8,11 +8,15 @@ provider "azurerm" {
 }
 
 
-backend "azurerm" {     
- storage_account_name  = "tstate20021"     
- container_name        = "tstate"     
- key                   = "terraform.tfstate"   
- } 
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "tstate"
+    storage_account_name = "tstate20021"
+    container_name       = "tstate"
+    key                  = "terraform.tfstate"
+  }
+}
+ 
  
 resource "azurerm_resource_group" "resourcegroup" {
   name     = "challenge1"
